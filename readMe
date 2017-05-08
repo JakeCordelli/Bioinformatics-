@@ -1,0 +1,8 @@
+https://gdancik.github.io/CSC-314/assignments/
+Link to final project and rubric
+
+Our Assingment:
+A DNA or RNA sequence is read from a file. 
+The program translates the entire sequence using all six possible reading frames. 
+In addition, all open reading frames identified are highlighted. 
+Note: you may not use Biopython or other available packages for this assignment.
