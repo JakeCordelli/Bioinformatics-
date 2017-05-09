@@ -1,13 +1,11 @@
 
-#import csv
-
-#from Bio import SeqIO 
-#from StringIO import StringIO
-
-
+#have the user specify the name of the file
+print ("Enter the file path of the txt file: ")
+filePath = str(input())
 #Define the file and location
-file=open("/Users/JakeCordelli/Desktop/hello.txt")
 
+print (filePath)
+file=open(filePath)
 
 
 #read in a file and turn it into a formatted stirng
