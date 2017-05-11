@@ -39,9 +39,12 @@ for char in sequence:
 #Regular 5'-3' strand
 print("The sequence as a string: \n", sequence)
 
+stopIndicator="(**STOP**)"
+startIndicator="(**M**)"
+
 #Dictionary for the proteins
 codontable = {
-    'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':'(**M**)',
+    'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':startIndicator,
     'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACU':'T',
     'AAC':'N', 'AAU':'N', 'AAA':'K', 'AAG':'K',
     'AGC':'S', 'AGU':'S', 'AGA':'R', 'AGG':'R',
@@ -55,8 +58,8 @@ codontable = {
     'GGA':'G', 'GGC':'G', 'GGG':'G', 'GGU':'G',
     'UCA':'S', 'UCC':'S', 'UCG':'S', 'UCU':'S',
     'UUC':'F', 'UUU':'F', 'UUA':'L', 'UUG':'L',
-    'UAC':'Y', 'UAU':'Y', 'UAA':'(**STOP**)', 'UAG':'(**STOP**)',
-    'UGC':'C', 'UGU':'C', 'UGA':'(**STOP**)', 'UGG':'W',
+    'UAC':'Y', 'UAU':'Y', 'UAA':stopIndicator, 'UAG':stopIndicator,
+    'UGC':'C', 'UGU':'C', 'UGA':stopIndicator, 'UGG':'W',
 }
 
 #Method that translates the DNA sequence given a different frame
