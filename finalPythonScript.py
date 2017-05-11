@@ -31,6 +31,8 @@ for char in sequence:
        transcribedSequence=transcribedSequence+'G'
    elif char == "G":
        transcribedSequence=transcribedSequence+'C'
+   elif char =="U":
+       transcribedSequence=transcribedSequence+'U'
    else:
        transcribedSequence=transcribedSequence+'-'
 
@@ -39,7 +41,7 @@ print("The sequence as a string: \n", sequence)
 
 #Dictionary for the proteins
 codontable = {
-    'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':'M',
+    'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':'(**M**)',
     'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACU':'T',
     'AAC':'N', 'AAU':'N', 'AAA':'K', 'AAG':'K',
     'AGC':'S', 'AGU':'S', 'AGA':'R', 'AGG':'R',
@@ -53,8 +55,8 @@ codontable = {
     'GGA':'G', 'GGC':'G', 'GGG':'G', 'GGU':'G',
     'UCA':'S', 'UCC':'S', 'UCG':'S', 'UCU':'S',
     'UUC':'F', 'UUU':'F', 'UUA':'L', 'UUG':'L',
-    'UAC':'Y', 'UAU':'Y', 'UAA':'_', 'UAG':'_',
-    'UGC':'C', 'UGU':'C', 'UGA':'_', 'UGG':'W',
+    'UAC':'Y', 'UAU':'Y', 'UAA':'(**STOP**)', 'UAG':'(**STOP**)',
+    'UGC':'C', 'UGU':'C', 'UGA':'(**STOP**)', 'UGG':'W',
 }
 
 #Method that translates the DNA sequence given a different frame
