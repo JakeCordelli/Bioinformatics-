@@ -4,8 +4,8 @@
 #have the user specify the name of the file
 print ("Enter the file path of the txt file: ")
 filePath = str(input())
-#Define the file and location
 
+#Define the file and location
 print('The path entered is: ', filePath)
 file=open(filePath)
 
@@ -13,11 +13,9 @@ file=open(filePath)
 def readNFormat(file):
    file=file.read()
    file=file.upper()
-   #handle = StringIO(file)
-   #file = SeqIO.parse(handle, "fasta")
    return file
 
-#sequence stores the formatted refSeq file as a string of letters
+#sequence stores the text file containing letters as a string
 sequence=readNFormat(file)
 
 transcribedSequence = ''
@@ -115,7 +113,6 @@ frame5Transcribed=reverseSequence[1::]
 print("\n\nFrame 5 transcribed: \n3'-"+frame5Transcribed+"-5'")
 aminoAcidsFrame5=translate_dna(frame5Transcribed)
 print ('\nFrame 5 translated: \n', aminoAcidsFrame5, '\n')
-
 
 #Frame 6
 #ReadingFrame6 (3'-5' starting at 2)
